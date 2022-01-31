@@ -25,7 +25,7 @@ class guerrier {
     }
 
     attaquer = (cible) => {
-        if (cible.constructor.name === 'guerrier' || cible.constructor.name === 'viking'|| cible.constructor.name === 'samourai' || cible.constructor.name === 'chevalier')
+        if (cible.constructor.name === 'guerrier' || cible.constructor.name === 'viking' || cible.constructor.name === 'samourai' || cible.constructor.name === 'chevalier')
             console.log(
                 `${this.nom} attaque avec une puissance de ${this.degats} , ${cible.nom} possède une armure de protection de ${cible.armure}`
             );
@@ -63,32 +63,29 @@ class guerrier {
 
 class chevalier extends guerrier {
     constructor(nom) {
-        super(nom,"éspadon", 100, 10, 10);
+        super(nom, "éspadon", 100, 10, 10);
 
     }
 }
 
 class samourai extends guerrier {
     constructor(nom) {
-        super(nom,"katana", 100, 10, 20);
+        super(nom, "katana", 100, 10, 20);
 
     }
 }
 
 class viking extends guerrier {
     constructor(nom) {
-        super(nom,"hache", 100, 7, 14);
+        super(nom, "hache", 100, 7, 14);
 
     }
 }
 
+let guerrier1 = new guerrier("jean");
+let guerrier2 = new guerrier("Paul");
+let samourai1 = new samourai("shinichi")
+let viking1 = new viking("ragnar")
+let chevalier1 = new chevalier("arthas")
 
-
-
-    let guerrier1 = new guerrier("jean");
-    let guerrier2 = new guerrier("Paul");
-    let samourai1 = new samourai ("shinichi")
-    let viking1 = new viking("ragnar")
-    let chevalier1 = new chevalier("arthas")
-
-    guerrier.combatUltime(chevalier1, viking1)
+// guerrier.combatUltime(chevalier1, viking1)
