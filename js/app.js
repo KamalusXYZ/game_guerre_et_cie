@@ -82,6 +82,7 @@ class viking extends guerrier {
     }
 }
 
+
 let guerrier1 = new guerrier("jean");
 let guerrier2 = new guerrier("Paul");
 let samourai1 = new samourai("shinichi")
@@ -89,3 +90,8 @@ let viking1 = new viking("ragnar")
 let chevalier1 = new chevalier("arthas")
 
 // guerrier.combatUltime(chevalier1, viking1)
+
+guerrier1.sePresenter()
+
+
+

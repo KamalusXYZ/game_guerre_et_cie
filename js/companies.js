@@ -1,6 +1,6 @@
 class companies {
 
-    constructor(nomCompanie, nomGuerriers = [],  nombreGuerrier = nomGuerriers.length) {
+    constructor(nomCompanie, nomGuerriers = [], nombreGuerrier = nomGuerriers.length) {
 
         this.type = this.constructor.name;
         this.nomCompanie = nomCompanie;
@@ -13,17 +13,76 @@ class companies {
         console.log("La companie" + this.nomCompanie + ", composée de " + this.nombreGuerrier + " guerriers")
     }
 
+    afficherGuerriers = () => {
+
+        console.log("Liste des guerriers " + this.nomGuerriers)
+    }
+
+    guerrierAppartient = (varCompanie) => {
+
+        if (varCompanie === this.nomCompanie) {
+            varCompanie = true
+            console.log(true)
+            return
 
 
+        } else {
+            varCompanie = false
+            console.log(false)
+            return
+        }
+
+    }
+
+
+
+    // setnomGuerriers = (guerrier) => {
+    //     this.nomGuerriers = guerrier;
+        
+
+
+
+    //     console.log(guerrier)
+        
+
+    // }
+    // setnomGuerriers = (guerrier) => {
+        
+    //     this.nomGuerriers = [guerrier];
+        
+
+
+
+        
+    //     console.log([guerrier])
+        
+
+    // }
+    setnomGuerriers = (guerrier) => {
+     
+        this.nomGuerriers = companies1.guerrier;
+
+
+
+        console.log({guerrier})
+
+    }
 
 }
+let companie1 = new companies("Les chacals");
 
 
-let nouvelleCompanie1 = new companies(" Brebis Galeuse");
+companie1.setnomGuerriers(
+    viking1
+);
+
+companie1.sePresenter()
+companie1.afficherGuerriers()
+companie1.guerrierAppartient("Les chats")
 
 
 
 
 
 
-nouvelleCompanie1.sePresenter()
+// console.log(companie1)
