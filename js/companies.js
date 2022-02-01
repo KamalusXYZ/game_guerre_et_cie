@@ -1,79 +1,67 @@
 class companies {
 
-    constructor(nomCompanie, nomGuerriers = [], nombreGuerrier = nomGuerriers.length) {
+    constructor(nomCompanie) {
 
         this.type = this.constructor.name;
         this.nomCompanie = nomCompanie;
-        this.nombreGuerrier = nombreGuerrier;
-        this.nomGuerriers = nomGuerriers
+        this.nombreGuerrier = 0;
+        this.guerriers = []
+
+
     }
 
     sePresenter = () => {
 
         console.log("La companie" + this.nomCompanie + ", composée de " + this.nombreGuerrier + " guerriers")
+
     }
 
     afficherGuerriers = () => {
-
-        console.log("Liste des guerriers " + this.nomGuerriers)
+        console.log("Liste des guerriers: ")
+        this.guerriers.forEach(element => {
+           console.log(element)
+            
+        });
     }
 
-    guerrierAppartient = (varCompanie) => {
+    guerrierAppartient = (guerrier) => {
 
-        if (varCompanie === this.nomCompanie) {
-            varCompanie = true
-            console.log(true)
-            return
+        if (this.guerriers.indexOf(guerrier === -1)) {
 
-
-        } else {
-            varCompanie = false
-            console.log(false)
-            return
+            return false
         }
+        else { return true}
 
     }
 
+    ajouterGuerrier = (guerrier) => {
 
+        if (guerrier.isDead() === true  ) return
 
-    // setnomGuerriers = (guerrier) => {
-    //     this.nomGuerriers = guerrier;
-        
-
-
-
-    //     console.log(guerrier)
-        
-
-    // }
-    // setnomGuerriers = (guerrier) => {
-        
-    //     this.nomGuerriers = [guerrier];
-        
-
-
-
-        
-    //     console.log([guerrier])
-        
-
-    // }
-    setnomGuerriers = (guerrier) => {
-     
-        this.nomGuerriers = companies1.guerrier;
-
-
-
-        console.log({guerrier})
+        this.guerriers.push(guerrier)
+        this.nombreGuerrier += 1 
 
     }
+
+    supprimerGuerrier = (guerrier) => {
+
+        // /incomplet/
+
+        this.nombreGuerrier = this.nombreGuerrier -1
+
+
+    }
+    
 
 }
 let companie1 = new companies("Les chacals");
 
 
-companie1.setnomGuerriers(
+companie1.ajouterGuerrier(
     viking1
+);
+companie1.ajouterGuerrier(
+    chevalier1
 );
 
 companie1.sePresenter()
@@ -85,4 +73,4 @@ companie1.guerrierAppartient("Les chats")
 
 
 
-// console.log(companie1)
+
